@@ -30,7 +30,7 @@ jobs:
           version: ${{ matrix.ghidra }}
 
       - name: Build GhidraOrbis
-        uses: eskatos/gradle-command-action@v2
+        uses: gradle/actions/setup-gradle@main
         with:
           gradle-version: 9.1
           arguments: buildExtension -PGHIDRA_INSTALL_DIR=${{ env.GHIDRA_INSTALL_DIR }}
