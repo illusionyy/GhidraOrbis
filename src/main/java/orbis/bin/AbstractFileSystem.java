@@ -109,7 +109,7 @@ public abstract class AbstractFileSystem<T extends FileInfoProvider> implements 
 		int count = helper.getFileCount();
 		try {
 		helper.storeFile(entry.getFileName(), count, false, entry.getSize(), entry);
-		} catch (exception IOException) {
+		} catch (IOException e) {
 		}
 	}
 }
