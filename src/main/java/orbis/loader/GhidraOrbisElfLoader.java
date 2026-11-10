@@ -108,7 +108,7 @@ public class GhidraOrbisElfLoader extends ElfLoader {
 			.orElseThrow();
 		long base = Long.parseUnsignedLong((String) baseOption.getValue(), 16);
 		if (base == 0) {
-			baseOption.setValue("1000000");
+			baseOption.setValue("400000");
 		}
 		return options;
 	}
