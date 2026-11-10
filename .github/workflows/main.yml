@@ -29,11 +29,11 @@ jobs:
         with:
           version: ${{ matrix.ghidra }}
 
-      - name: Build GhidraOrbis
+      - name: Setup Gradle
         uses: gradle/actions/setup-gradle@main
-        with:
-          gradle-version: 9.1
-          arguments: buildExtension -PGHIDRA_INSTALL_DIR=${{ env.GHIDRA_INSTALL_DIR }}
+
+      - name: Build GhidraOrbis
+        run: ./gradlew buildExtension -PGHIDRA_INSTALL_DIR=${{ env.GHIDRA_INSTALL_DIR }}
 
       - name: Upload GhidraOrbis Artifact
         uses: actions/upload-artifact@main
