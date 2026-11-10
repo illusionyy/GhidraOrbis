@@ -33,7 +33,7 @@ jobs:
         uses: gradle/actions/setup-gradle@main
 
       - name: Build GhidraOrbis
-        run: ./gradlew buildExtension -PGHIDRA_INSTALL_DIR=${{ env.GHIDRA_INSTALL_DIR }}
+        run: ./gradle buildExtension -PGHIDRA_INSTALL_DIR=${{ env.GHIDRA_INSTALL_DIR }}
 
       - name: Upload GhidraOrbis Artifact
         uses: actions/upload-artifact@main
